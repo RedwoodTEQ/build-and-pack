@@ -1,10 +1,10 @@
 import sys
 import os
+from lib import vsproj
 
 
 def main():
-    os.system('build-image.bat')
-    os.system('pack-cli.bat')
+    os.system(f'release-gsv.bat {vsproj.get_project_version()}')
 
 
 if __name__ == '__main__':
